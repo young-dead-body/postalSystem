@@ -294,6 +294,10 @@ namespace postalSystem
         
         ArrayList emailsDB_tableList = new ArrayList();
 
+        /// <summary>
+        /// Запись всех писел в коллекцию
+        /// </summary>
+        /// <param name="FileName"></param>
         private void parseEmailsDB(String FileName)
         {
             StreamReader reader = new StreamReader(FileName); // открытие файла с базой данных
