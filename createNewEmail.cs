@@ -14,6 +14,9 @@ namespace postalSystem
 {
     public partial class createNewEmail : Form
     {
+        /// <summary>
+        /// этот конструктор дефолтом делает окно для создание нового письма
+        /// </summary>
         public createNewEmail()
         {
             InitializeComponent();
@@ -28,6 +31,13 @@ namespace postalSystem
         public ArrayList List { get => list; set => list = value; }
         public int IndexRow { get => indexRow; set => indexRow = value; }
 
+        /// <summary>
+        /// конструктор для редактирования сообщения
+        /// </summary>
+        /// <param name="textNameForm"> наименование формы </param>
+        /// <param name="textWhom"> кому сообщение предназначено </param>
+        /// <param name="textThemes"> тема сообщения </param>
+        /// <param name="textEmails"> само сообщение </param>
         public createNewEmail(String textNameForm,String textWhom, String textThemes, String textEmails)
         {
             InitializeComponent();
@@ -112,6 +122,10 @@ namespace postalSystem
             Close();
         }
 
+        /// <summary>
+        /// перезапись БД
+        /// </summary>
+        /// <param name="FileName"></param>
         private void rewriteDBEmails(String FileName)
         {
             FileStream file = new FileStream(FileName, FileMode.Create); //создаем файловый поток
