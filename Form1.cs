@@ -358,6 +358,10 @@ namespace postalSystem
             }
         }
 
+        /// <summary>
+        /// Перезапись базы данных (тех писем которые требуются )
+        /// </summary>
+        /// <param name="FileName"> имя файла для перезаписи </param>
         private void rewriteDBEmails(String FileName) 
         {
             FileStream file = new FileStream(FileName, FileMode.Create); //создаем файловый поток
@@ -397,6 +401,9 @@ namespace postalSystem
             }
         }
 
+        /// <summary>
+        /// отправка удаленного сообщения в корзину
+        /// </summary>
         private void sendingCart()
         {
             ArrayList allEmails = new ArrayList();
@@ -423,6 +430,9 @@ namespace postalSystem
             MessageBox.Show("Удаленное письмо теперь находится в корзине...", "Напоминание");
         }
 
+        /// <summary>
+        /// открытие черновиков из вне
+        /// </summary>
         public void openDraft() 
         {
             StreamReader reader = new StreamReader("Черновики.txt"); // открытие файла с базой данных
