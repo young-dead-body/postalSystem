@@ -214,6 +214,10 @@ namespace postalSystem
         }
 
         bool rightСlick = false;
+        /// <summary>
+        /// Для динамизирования размера полей таблицы
+        /// </summary>
+        /// <param name="i"></param>
         private void themeSize(int i)
         {
             if (i > 8)
